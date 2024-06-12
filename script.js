@@ -3,10 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
         { item: "Wood", priceRange: "1-2 coins each" },
         { item: "Stone", priceRange: "1-2 coins each" },
         { item: "Iron Ore", priceRange: "2-4 coins each" },
-        { item: "Coal", priceRange: "2-4 coins each" },
-        { item: "Wheat", priceRange: "1-2 coins each" },
-        { item: "Pumpkin", priceRange: "1-2 coins each" },
-        { item: "Berry Bush", priceRange: "1-2 coins each" },
         // Add more resource items here...
     ];
 
@@ -28,17 +24,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const toolsList = document.getElementById("tools-list");
     const weaponsList = document.getElementById("weapons-list");
 
-    // Function to generate HTML for each section
-    function generateListHTML(data) {
+    // Function to generate HTML for each list
+    function generateListHTML(data, listElement) {
         let html = "";
         data.forEach(item => {
             html += `<li><strong>${item.item}:</strong> ${item.priceRange}</li>`;
         });
-        return html;
+        listElement.innerHTML = html;
     }
 
-    // Display data in respective sections
-    resourcesList.innerHTML = generateListHTML(resourceData);
-    toolsList.innerHTML = generateListHTML(toolsData);
-    weaponsList.innerHTML = generateListHTML(weaponsData);
+    // Display data in respective lists
+    generateListHTML(resourceData, resourcesList);
+    generateListHTML(toolsData, toolsList);
+    generateListHTML(weaponsData, weaponsList);
 });
