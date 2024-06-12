@@ -1,56 +1,56 @@
 body {
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-    background-image: url('background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #FFD700;
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    background-color: #f9f9f9;
 }
 
-header, footer {
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #e91e63;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
     text-align: center;
-    padding: 20px;
+    font-size: 2.5em;
 }
 
-h1 {
-    font-size: 3em;
-    text-shadow: 2px 2px 2px #000000;
-}
-
-#price-guide {
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #FF0000;
-}
-
-footer {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+main {
+    padding: 20px 0;
 }
 
 section {
+    background-color: #fff;
     margin-bottom: 40px;
+    border-radius: 10px;
 }
 
 h2 {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 10px;
+    color: #e91e63;
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-ul {
+.price-list {
     list-style-type: none;
     padding: 0;
 }
 
-li {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.price-list li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: #e91e63;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
 }
